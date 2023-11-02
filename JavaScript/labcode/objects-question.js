@@ -24,3 +24,37 @@ Call the object method and change the values for the Shopee Coins and Coin conve
 
 
  */
+
+let customer = {
+    name: "Shang Chi",
+    age: 24,
+    bank: {
+        name: "Ten Rings Bank",
+        accountNo: "3-534454-2"
+    },
+    countryOfResidence: "Ta Lo",
+    shopeeCoins: 35000,
+    coinConversionRate: 0.04,
+    itemPurchased: {
+        description: "Power Rings",
+        unitPrice: 52.00,
+        quantity: 10,
+        rating: 4.2,
+        vendor: "Marvel Cinematic Universe"
+    },
+    canPayWithCoins:function(){
+        const cashEquivalent = this.shopeeCoins * this.coinConversionRate;
+        const totalPrice = this.itemPurchased.unitPrice * this.itemPurchased.quantity;
+        return cashEquivalent >= totalPrice;
+    },
+}
+//Check if customer can pay with coins
+console.log("Can the customer pay with Shopee Coins alone? "+customer.canPayWithCoins());
+
+//Update Shopee Coins and Coin Conversion Rate
+customer.shopeeCoins = 100000;
+customer.coinConversionRate = 0.05;
+
+//Check again after updating
+console.log("Can the customer pay with Shopee Coins alone? "+customer.canPayWithCoins());
+

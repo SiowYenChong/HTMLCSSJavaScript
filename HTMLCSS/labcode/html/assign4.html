@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat Form</title>
+</head>
+<body>
+    <h1>Top 3 things cats hate:</h1>
+    <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+    </ol>
+
+    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Cute kittens playing">
+
+    <form action="/submit-cat" method="post">
+        <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+                <label for="indoor-outdoor"></label>
+                <input type="radio" id="indoor" name="indoor-outdoor" value="indoor">
+                <label for="indoor">Indoor</label>
+                <input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor">
+                <label for="outdoor">Outdoor</label><br>
+            </fieldset>
+
+        <fieldset>
+            <legend>What's your cat's personality?</legend>
+                <label for="personality"></label>
+                <input type="checkbox" id="loving" name="personality" value="loving">
+                <label for="loving">Loving</label><br>
+                <input type="checkbox" id="lazy" name="personality" value="lazy">
+                <label for="lazy">Lazy</label><br>
+                <input type="checkbox" id="energetic" name="personality" value="energetic">
+                <label for="energetic">Energetic</label><br>
+            </fieldset>
+
+        <p></p>
+        <input type="text" id="url" name="url" placeholder = "cat photo url" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>&copy; <a href = #>MPC Malaysia</a></p>
+</body>
+</html>
